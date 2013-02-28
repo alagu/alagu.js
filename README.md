@@ -1,15 +1,22 @@
 Alagu.js
---------
+========
+Simple replace based templating language (which works in Chrome packaged apps).
 
-Background:
+Background
+----------
 
 Chrome packaged apps do not support any kind of templating language because of Content Security Policy. (http://developer.chrome.com/apps/app_csp.html)
 
+Usage
+-----
 
- Simple replace based templating language
- which works in Chrome packaged apps.
+```
+   template =  Alagu.render("Hello {{ tester }}", {tester : 'Alagu'})
+   console.log(template)
+```
 
- Syntax : template is a string with {{ variables }}
-          data is a hash of variables with values
+Gives
 
- Example: Alagu.render("Hello {{ tester }}", {tester : 'Alagu'})
+```
+ Hello Alagu
+```
